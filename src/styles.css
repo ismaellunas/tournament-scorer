@@ -130,7 +130,7 @@ input[type="text"]:focus, input[type="search"]:focus { border-color: var(--court
   border: 1px solid transparent;
   box-shadow: none;
 }
-#tabs button:hover:not(:disabled) { background: rgba(179,185,190,0.15); }
+#tabs button:hover:not(:disabled):not([aria-selected="true"]) { background: rgba(179,185,190,0.15); }
 #tabs button[aria-selected="true"] { background: var(--court-blue); color: var(--line-white); }
 .saved-indicator { font-size: 0.85rem; opacity: 0.85; min-width: 5.5em; }
 .saved-indicator[data-state="saving"] { color: var(--secondary-dark, #be9b32); }
