@@ -15,10 +15,16 @@ See [plan.md](plan.md) for the full build spec.
 - Projector-friendly dashboard view
 - Data persisted locally in IndexedDB (falls back to in-memory with a warning banner if unavailable)
 - Everything - HTML, CSS, JS, fonts - bundled into one file with no external requests
+- Installable as a Chrome app (PWA) via `manifest.json` and `icons/`
 
 ## Usage
 
 Open `index.html` in a browser. That's it - no install, no server.
+
+When served over HTTPS (e.g. the Vercel deployment), Chrome's address bar
+offers an "Install" option that adds it as a standalone app with no browser
+chrome. `manifest.json` and `icons/` are the only files outside `index.html`
+needed for this; they're static and don't go through `build.js`.
 
 ## Development
 
