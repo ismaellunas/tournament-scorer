@@ -1,0 +1,20 @@
+/* Inter and Outfit, embedded as base64 so the single-file app still makes
+   zero network requests. These are the exact variable-font files the
+   GEWCI Ministry Tools site (the app this tool is hosted under) self-hosts
+   via next/font - same bytes, so typography matches the host site exactly. */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(data:font/woff2;base64,/*__INTER_FONT_B64__*/) format('woff2');
+}
+
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(data:font/woff2;base64,/*__OUTFIT_FONT_B64__*/) format('woff2');
+}

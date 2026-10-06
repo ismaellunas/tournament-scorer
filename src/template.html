@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pickleball Tournament Tracker</title>
+<style>
+/*__STYLES__*/
+</style>
+</head>
+<body>
+<div id="danger-banner" class="banner banner-danger" hidden>Not saving. Data will be lost on refresh.</div>
+<div id="nudge-banner" class="banner banner-nudge" hidden>
+  <span>Download a backup.</span>
+  <button type="button" class="btn-small" data-action="export-backup">Export now</button>
+  <button type="button" class="btn-small btn-ghost" data-action="dismiss-nudge">Dismiss</button>
+</div>
+
+<div id="topbar">
+  <div class="topbar-accent"></div>
+  <div class="topbar-row">
+    <input type="text" class="event-title" id="event-title-input" data-bind="event-title" aria-label="Event title" value="Pickleball Tournament">
+    <span class="saved-indicator" id="saved-indicator" data-state="saved">Saved</span>
+    <div id="tabs" role="tablist">
+      <button type="button" role="tab" data-action="switch-tab" data-tab="setup">Setup</button>
+      <button type="button" role="tab" data-action="switch-tab" data-tab="score">Score</button>
+      <button type="button" role="tab" data-action="switch-tab" data-tab="dashboard">Dashboard</button>
+    </div>
+    <div class="backup-menu">
+      <button type="button" class="btn-ghost btn-small" data-action="export-backup">Export</button>
+      <button type="button" class="btn-ghost btn-small" data-action="trigger-import">Import</button>
+      <input type="file" id="import-file-input" accept="application/json" hidden>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section id="view-setup" class="view"></section>
+  <section id="view-score" class="view"></section>
+  <section id="view-dashboard" class="view"></section>
+</main>
+
+<script>
+/*__SCRIPTS__*/
+</script>
+</body>
+</html>
